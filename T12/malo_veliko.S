@@ -1,3 +1,4 @@
+# program treba da iz unetog stringa sva mala slova zameni velikim velika malim i sve brojeve zameni zvezdicom
 .section .data
 	string: .ascii "Unesite string \0"
 	strlen=.-string

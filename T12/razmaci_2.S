@@ -1,20 +1,24 @@
+# Za uneti string npr: falkutet napraviti string fa al lk ku ut te et
+# u zavisnosti od promenjive razmak se taj dobijeni string ispisuje sa razmacima ili bez
+# ako je promenjiva razmak 0 onda se ispisuje bez razmaka u suprotnom sa razmacima
 .section .data
 	string: .ascii "Unesite string \0"
 	strlen=.-string
-string_max=20
-string1: .fill string_max,1,0
 
-max2 = 50
-string2: .fill max2,1,0
+	string_max=20
+	string1: .fill string_max,1,0
 
-string3: .fill max2,1,0
+	max2 = 50
+	string2: .fill max2,1,0
 
-razmak: .long 0
-brojac: .long 0 # kada je nula samo prepisemo a kada je 1 prepisemo na space pa opet
-duzina: .long 0
+	string3: .fill max2,1,0
 
-duzina_sa_razmacima: .long 0
-duzina_bez_razmaka: .long 0
+	razmak: .long 0
+	brojac: .long 0 # kada je nula samo prepisemo a kada je 1 prepisemo na space pa opet
+	duzina: .long 0
+
+	duzina_sa_razmacima: .long 0
+	duzina_bez_razmaka: .long 0
 
 .section .text
 .globl main
@@ -44,7 +48,7 @@ petlja:
 	je samo_prepisi # prvo je slovo
 	
 	#svaki naredni karakter treba da dupliramo i ubacimo razmak osim ako nije poslednji
-	cmpb $10, 1(%esi)
+	cmpb $10, 1(%esi) # <- 1(%esi) tako dobijamo naredni karakter u odnosu na esi
 	je poslednji_karakter
 	
 	# ako nije ni prvi a ni poslednji

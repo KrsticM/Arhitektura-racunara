@@ -1,3 +1,5 @@
+# program treba da prebroji samoglasnike u stringu i da smesti broj odgovarajucih samoglasnika u odgovarajuce promenjive 
+# na kraju ako imam samoglasnike ispisem ima samoglasnika, ako nema ispisem nema samoglasnika
 .section .data
 	string: .ascii "Unesite string \0"
 	strlen=.-string
@@ -98,9 +100,6 @@ nema_samoglasnika:
 	leal string2,%ecx
 	movl $string2len,%edx
 	int $0x80
-	
-	
-
 kraj:
 	movl $1,%eax
 	movl $0,%ebx

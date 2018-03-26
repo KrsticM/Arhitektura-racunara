@@ -38,10 +38,7 @@ sledeci:                      #prelazak na sledeci element niza
 	incl %ecx
 	cmpl $BROJ_ELEMENATA, %ecx # broj_elemenata = 4, ecx = 0,1,2,3, ( 4 - izlazak iz petlje )
 	jl   pocetak # jump if lower, vrtimo se sve dok je ecx < 4
-
-
-
-
+	
 end: 
 	movl $1, %eax
 	movl van_opsega, %ebx

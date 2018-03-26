@@ -1,5 +1,7 @@
 # program treba da uneti string transformise u kamilju notaciju odnosno svako prvo slovo u svakoj recenici je velika
 # sva ostala slova su mala
+# primer: kaMilja NoTaCija pRiMEr
+# izlaz: Kamilja Notacija Primer
 .section .data
 
 string: .ascii "Unesite string: \0"
@@ -89,7 +91,3 @@ kraj:
 	movl $1, %eax
 	movl $0, %ebx
 	int $0x80
-
-
-
-
