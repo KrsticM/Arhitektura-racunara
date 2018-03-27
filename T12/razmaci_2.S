@@ -87,7 +87,7 @@ poslednji_karakter:
 	incl duzina_sa_razmacima
 	jmp petlja	
 kraj_petlje:
-	movl $0, (%edi)
+	movb $0, (%edi)
 	
 	cmpl $0, razmak
 	je izbaci_razmake
