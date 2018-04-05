@@ -1,3 +1,5 @@
+#program za uneti string broji koliko ima nealfanumerika i zamenjuje ih nulom
+#kao izlazni kod programa se vraca broj nealfanumerika
 .section .data
 
 MAX = 100
